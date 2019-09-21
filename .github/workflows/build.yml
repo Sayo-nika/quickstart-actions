@@ -44,7 +44,7 @@ jobs:
 
       # Now it's time to get the DDLC archives.
       - name: Download DDLC archives
-        uses: alicerunsonfedora/mc-action@master
+        uses: Sayo-nika/mc-action@master
 
       # Finally, let's build the project.
       - name: Build DDLC Mod
