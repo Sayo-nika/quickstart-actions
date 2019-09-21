@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: |
           mkdir mod
-          rm -rf sample_mod/stein/README.html && cp -vRf sample_mod/stein/* mod/*
+          rm -rf sample_mod/stein/README.html && cp -vRf sample_mod/stein/* mod/
 
       # Now it's time to get the DDLC archives.
       - name: Download DDLC archives
@@ -49,6 +49,8 @@ jobs:
       # Finally, let's build the project.
       - name: Build DDLC Mod
         uses: ProjectAliceDev/renpy-build-action@master
+        # This ID is needed for the release step.
+        id: buildseq
         with:
           sdk-version: '6.99.12.4'
           project-dir: 'mod'
