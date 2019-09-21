@@ -46,6 +46,16 @@ jobs:
       - name: Download DDLC archives
         uses: Sayo-nika/mc-action@master
 
+      # Let's make sure our code works by running the linter.
+      - name: Lint DDLC Mod
+        uses: ProjectAliceDev/renpy-lint-action@v1.1.0
+        with:
+          sdk-version: '6.99.12.4'
+          project-dir: mod
+        env:
+          SDL_AUDIODRIVER: dummy
+          SDL_VIDEODRIVER: dummy
+
       # Finally, let's build the project.
       - name: Build DDLC Mod
         uses: ProjectAliceDev/renpy-build-action@v1.1.0
