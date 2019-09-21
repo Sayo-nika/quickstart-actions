@@ -29,6 +29,10 @@ jobs:
         with:
           fetch-depth: 50
 
+          # We need this since sample_mod is actually a Git submodule.
+          # This may not apply to you if your mod is in the repo itself.
+          submodules: true
+
       # Now we need to set up where the mod will be and how to run the action.
       # This setup may vary depending on the structure of the DDLC mod.
       # We'll already be in the repository's root by default.
@@ -36,7 +40,6 @@ jobs:
         shell: bash
         run: |
           mkdir mod
-          ls
           rm -rf sample_mod/stein/README.html && cp -vRf sample_mod/stein/* mod/*
 
       # Now it's time to get the DDLC archives.
