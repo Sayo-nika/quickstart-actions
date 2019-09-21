@@ -25,3 +25,5 @@ Most of the steps in the workflow should already set for you to use. In most cas
 ```
 
 Additionally, you can add other steps and actions to customize the workflow to your needs. This may even include running the linter.
+
+> For more information, consult GitHub's documentation on Actions here: [https://help.github.com/en/categories/automating-your-workflow-with-github-actions](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
