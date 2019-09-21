@@ -48,7 +48,7 @@ jobs:
 
       # Finally, let's build the project.
       - name: Build DDLC Mod
-        uses: ProjectAliceDev/renpy-build-action@master
+        uses: ProjectAliceDev/renpy-build-action@v1.1.0
         # This ID is needed for the release step.
         id: buildseq
         with:
