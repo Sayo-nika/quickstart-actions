@@ -36,6 +36,7 @@ jobs:
         shell: bash
         run: |
           mkdir mod
+          ls
           rm -rf sample_mod/stein/README.html && cp -vRf sample_mod/stein/* mod/*
 
       # Now it's time to get the DDLC archives.
